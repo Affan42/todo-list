@@ -1,0 +1,222 @@
+:root {
+  --border-color: #483e4a;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-image: url(./Images/bg_img.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+p {
+  margin: 0;
+  color: white;
+  font-family: "Jost", serif;
+}
+i {
+  color: white;
+}
+.visible{
+  display: block !important;
+}
+.container {
+  background-color: rgba(155, 61, 61, 0.2);
+  backdrop-filter: blur(2px);
+  padding: 20px 17px;
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+  width: 300px;
+  min-width: 0;
+  margin-top: 100px;
+  height: fit-content;
+  max-height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+}
+.main_title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+.progress_container {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 20px auto;
+  width: 100%;
+}
+.progress_bar_wrapper .title {
+  font-weight: 600;
+}
+.progress_bar_wrapper {
+  flex: 1;
+}
+.progress_bar {
+  background-color: #935469;
+  height: 5px;
+  border-radius: 18px;
+  width: 90%;
+  margin-top: 10px;
+}
+.progress_done {
+  height: 100%;
+  background-color: #ff6286;
+  width: 0%;
+  border-radius: 18px;
+}
+.ratio_circle {
+  height: 60px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  border: 1px solid white;
+  background-color: #ff6286;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.ratio_txt {
+  margin-left: 2px;
+}
+.input_wrapper {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+.tooltip{
+  position: absolute;
+  top: -20px;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  display: none;
+}
+
+.tooltip p{
+color: red;
+font-size: 13px;
+}
+
+.extra_white_glassMorphism {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.input_tasks {
+  height: 35px;
+  width: 100%;
+  border-radius: 40px;
+  color: white;
+  font-size: 16px;
+  padding: 2px 10px 0 15px;
+  border: 2px solid red;
+}
+.input_tasks:is(:hover, :focus) {
+  border: none;
+  outline: none;
+}
+.add_btn {
+  font-size: 24px;
+  border-radius: 60%;
+  width: 35px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.add_btn:hover {
+background-color: #ff6286;
+}
+.tasks_wrapper {
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: clip;
+  overflow-y: auto;
+  height: 100%;
+  flex: 1;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 7px;
+  border-radius: 40px;
+  align-items: center;
+  border: 2px solid green;
+  width: 100%;
+}
+.task_left_part {
+  margin-right: 15px;
+}
+.task_left_part .circle {
+  height: 23px;
+  aspect-ratio: 1;
+  border: 1px solid green;
+  border-radius: 60%;
+}
+.tick_container {
+  width: 100%;
+  height: 100%;
+  background-color: #ff6286;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 60%;
+  cursor: pointer;
+}
+.tick_icon {
+  margin-left: -1px;
+}
+.task_name {
+  font-size: 16px;
+  font-weight: 600;
+  word-break: break-word;
+}
+.taskDone{
+  color: red;
+  text-decoration: line-through red 2px;
+}
+.edit_btn,
+.delete_btn {
+  height: 25px;
+  aspect-ratio: 1;
+  border-radius: 60%;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.edit_btn {
+  background-color: #fbc534;
+}
+.edit_btn_second_bg {
+  background-color: #e48d61;
+}
+.delete_btn {
+  background-color: #c22f51;
+}
+.task_right_part {
+  display: flex;
+  gap: 6px;
+}
+.no_tasks_img {
+ width: 200px;
+aspect-ratio: 1;
+ object-fit: contain;
+}
