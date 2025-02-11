@@ -128,7 +128,7 @@ function renderTasks(tasksToRender = state.tasks){
         <p class="task_name ${task.isDone ? 'taskDone' : ''}"></p>
     </div>
     <div class="task_right_part">
-        <button data-task-id="${task.id}" class="edit_btn">
+        <button data-task-id="${task.id}"  class="edit_btn ${task.isDone ? 'edit_btn_on_task_done' : ''} ">
         <i class="ri-pencil-fill icon_edit"></i>
         </button>
         <button class="delete_btn">
